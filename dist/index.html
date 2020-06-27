@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <!-- Uploaded in Tumblr Theme Assets -->
+    <!-- <link rel="stylesheet" href="https://static.tumblr.com/rrhfbyx/NaAq8b79w/styles.css"> -->
+    <meta name="theme-color" content="#ff5438">
+
+    <!-- Call in Tumblr custom CSS -->
+    <style media="screen">
+        {
+            CustomCSS
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <header class="site-header">
+        <h1><a href="{BlogURL}">{Title}</a></h1>
+        {block:HomePage}
+        <h2>{Description}</h2>
+        {/block:HomePage}
+    </header>
+
+    <main>
+        {block:Posts}
+        <section class="posts">
+            {Block:Photo}
+            <article class="post post__photo">
+
+                {block:IndexPage}
+                <figure class="photo photo__index">
+                    <img alt="{PhotoAlt}." src="{PhotoURL-1280}" sizes="(min-width: 900px) 900px, 100vw" srcset="{PhotoURL-400} 400w, {PhotoURL-500} 500w, {PhotoURL-1280} 1280w">
+                    <figcaption>
+                        {block:Caption}
+                        <span>{Caption}</span>
+                        {/block:Caption}
+                        <a href="{RelativePermalink}">Permalink</a>
+                    </figcaption>
+                </figure>
+                {/block:IndexPage}
+
+                {block:PermalinkPage}
+                <figure class="photo photo__permalink">
+                    <img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}.">
+                    {block:Caption}
+                    <figcaption>
+                        {Caption}
+                    </figcaption>
+                    {/block:Caption}
+                    <footer>
+                        {block:Source}{Source}{/block:Source}
+                        {block:Exif}
+                        <ul>{block:Camera}
+                            <li>Camera: {Camera}</li>{/block:Camera}{block:Aperture}
+                            <li>Aperture: {Aperture}</li>{/block:Aperture}{block:Exposure}
+                            <li>Exposure: {Exposure}</li>{/block:Exposure}{block:FocalLength}
+                            <li>Focal Length: {FocalLength}</li>{/block:FocalLength}
+                        </ul>{/block:Exif}
+                    </footer>
+                </figure>
+                {/block:PermalinkPage}
+
+            </article>
+            {/block:Photo}
+        </section>
+        {/block:Posts}
+
+        {block:Pagination}
+        <nav aria-label="Pagination" class="pagination">
+            {block:PreviousPage}
+            <a href="{PreviousPage}">Previous</a>
+            {/block:PreviousPage}
+
+            {block:NextPage}
+            <a href="{NextPage}">Next</a>
+            {/block:NextPage}
+        </nav>
+        {/block:Pagination}
+    </main>
+
+    <footer class="site-footer">
+        <p>&#169; {CopyrightYears}</p>
+        <img src="{PortraitURL-96}" alt="">
+        <a href="/archive">Archive</a>
+    </footer>
+</body>
+
+</html>

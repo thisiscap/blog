@@ -1,0 +1,116 @@
+/*
+  Stylesheet added to Tumblr theme assets
+*/
+
+/*
+  Globals
+*/
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* Layout */
+
+html {}
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+
+header {}
+
+main {
+    flex: 1;
+}
+
+section {}
+
+footer {}
+
+header.site-header {}
+
+footer.site-footer {}
+
+/* Images */
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* image-rendering: -webkit-optimize-contrast; */
+}
+
+/* Text */
+
+h1,
+h2 {
+    font-weight: normal;
+}
+
+h1 {}
+
+h2 {}
+
+p {}
+
+/* Links */
+
+a:link {}
+
+a:visited {}
+
+a:hover {}
+
+a:active {}
+
+/*
+  Posts
+*/
+
+section.posts {}
+
+article.post {}
+
+/*
+  Posts - Photo
+*/
+/* Layout */
+article.post__photo {}
+
+figure.photo {}
+
+figure.photo__index {}
+
+figure.photo__permalink {}
+
+/* Content */
+
+figure.photo img {}
+
+figure.photo figcaption {
+    display: flex;
+    justify-content: space-between;
+}
+
+figure.photo figcaption p {}
+
+figure.photo figcaption footer {}
+
+/*
+  Posts - Pagination
+*/
+
+nav.pagination {}
+
+nav.pagination a:link {}
